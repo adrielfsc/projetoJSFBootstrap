@@ -1,0 +1,18 @@
+create schema minor_box;
+
+use minor_box;
+
+create table reembolso(
+reembolso_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+valor_reembolso VARCHAR(12),
+descricao_reembolso VARCHAR(255),
+aprova_reembolso VARCHAR(1)
+);
+
+CREATE TABLE usuarios(
+id_usuario INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nome_usuario VARCHAR(100),
+email_usuario VARCHAR(50),
+senha_usuario VARCHAR(20),
+perfil_usuario VARCHAR(1)
+);
