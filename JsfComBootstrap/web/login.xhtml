@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+              crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+              crossorigin="anonymous"/>
+         <link rel="stylesheet" href="../resources/css/style.css"/>
+        <title>Bem-vindo Minor-box</title>
+    </h:head>
+    <h:body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
+            <div class="container">
+                <h:link class="navbar-brand" value="Minor box" outcome="login.xhtml"/>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <h:outputLink class="nav-link" value="#home-section">Home</h:outputLink>
+                        </li>
+                        <li class="nav-item">
+                            <h:outputLink class="nav-link" value="#explore-head-section">Cadastrar</h:outputLink>
+                        </li>
+                        <li class="nav-item">
+                            <h:outputLink class="nav-link" value="#share-head-section">Share</h:outputLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- HOME SECTION -->
+        <header id="home-section">
+            <div class="dark-overlay p-5">
+                <div class="home-inner container">
+                    <div class="row">
+                        <div class="col-lg-8 d-none d-lg-block">
+                            <h:outputLabel value=" Minorbox: controle suas   despesas de viagem" class="display-4"/>
+                            <div class="d-flex">
+                                <div class="p-4 align-self-start">
+                                    <h:outputLabel  class="fas fa-check fa-2x"/>
+                                    <!--<i class="fas fa-check fa-2x"></i>-->
+                                </div>
+                                <div class="p-4 align-self-end">
+                                    <h:outputLabel value="Adicione e gerencie seus gastos." class="blockquote"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="p-4 align-self-start">
+                                    <h:outputLabel  class="fas fa-check fa-2x"/>
+                                </div>
+                                <div class="p-4 align-self-end">
+                                    <h:outputLabel value="Tenha um relatório online sempre atualizado." class="blockquote"/>
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="p-4 align-self-start">
+                                   <h:outputLabel  class="fas fa-check fa-2x"/>
+                                </div>
+                                <div class="p-4 align-self-end">
+                                    <h:outputLabel value="Não se preocupe em se perder em suas contas." class="blockquote"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card bg-primary text-center card-form">
+                                <div class="card-body">
+                                    <h3>Entre</h3>
+                                    <p>Preencha os dados abaixo para acessar o sistema</p>
+                                    <h:form>
+                                        <div class="form-group input-group" >
+                                            <h:outputLabel value="Login" class="input-group-prepend input-group-text"/>
+                                            <h:inputText class="form-control form-control" />
+                                        </div>
+<!--                                        <div class="form-group input-group">
+                                            <h:outputLabel value="e-mail" class="input-group-prepend input-group-text"/>
+                                            <h:inputText class="form-control form-control" />
+                                        </div>-->
+                                        <div class="form-group input-group">
+                                            <h:outputLabel value="Senha" class="input-group-prepend input-group-text"/>
+                                            <h:inputSecret class="form-control form-control" label="senha"/>
+                                        </div>
+<!--                                        <div class="form-group input-group">
+                                            <h:outputLabel value="Confirm password" class="input-group-prepend input-group-text"/>
+                                            <h:inputSecret class="form-control form-control" label="Confirmar Senha"/>
+                                        </div>-->
+                                        <h:commandButton type="submit" value="Submeter" class="btn btn-outline-light btn-block"/>
+                                    </h:form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- EXPLORE HEAD -->
+        <section id="explore-head-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center py-5">
+                        <h:outputLabel value="Cadastre-se" class="display-4"/>
+                        <h:outputLabel class="lead" value="Ainda não possui um cadastro no MinorBox? Clique no botão abaixo e cadastre-se agora mesmo gratuitamente!"/>
+                        <br/>
+                        <h:commandButton class="btn btn-outline-secondary" value="clique aqui" action="#contactModal"  />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPLORE SECTION -->
+        <section id="explore-section" class="bg-light text-muted py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../img/explore-section1.jpg" alt="" class="img-fluid mb-3 rounded-circle"/>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Explore And Connect</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore reiciendis, voluptate at alias laborum odit aliquid
+                            tempore perspiciatis repudiandae hic?</p>
+                        <div class="d-flex">
+                            <div class="p-4 align-self-start">
+                                <i class="fas fa-check fa-2x"></i>
+                            </div>
+                            <div class="p-4 align-self-end">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi distinctio iusto, perspiciatis mollitia natus harum?
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="p-4 align-self-start">
+                                <i class="fas fa-check fa-2x"></i>
+                            </div>
+                            <div class="p-4 align-self-end">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi distinctio iusto, perspiciatis mollitia natus harum?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHARE HEAD -->
+        <section id="share-head-section" class="bg-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center py-5">
+                        <h1 class="display-4">Share</h1>
+                        <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente doloribus ut iure itaque quibusdam rem accusantium
+                            deserunt reprehenderit sunt minus.</p>
+                        <a href="#" class="btn btn-outline-light">Find Out More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHARE SECTION -->
+        <section id="share-section" class="bg-light text-muted py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../img/share-section1.jpg" alt="" class="img-fluid mb-3 rounded-circle"/>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Share What You Create</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore reiciendis, voluptate at alias laborum odit aliquid
+                            tempore perspiciatis repudiandae hic?</p>
+                        <div class="d-flex">
+                            <div class="p-4 align-self-start">
+                                <i class="fas fa-check fa-2x"></i>
+                            </div>
+                            <div class="p-4 align-self-end">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi distinctio iusto, perspiciatis mollitia natus harum?
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="p-4 align-self-start">
+                                <i class="fas fa-check fa-2x"></i>
+                            </div>
+                            <div class="p-4 align-self-end">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi distinctio iusto, perspiciatis mollitia natus harum?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer id="main-footer" class="bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center py-4">
+                        <h3>LoopLAB</h3>
+                        <p>Copyright &copy;
+                            <span id="year"></span>
+                        </p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- CONTACT MODAL -->
+        <div class="modal fade text-dark" id="contactModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Cadastre-se</h5>
+                        <button class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="userID">UserId</label>
+                                <input type="text" class="form-control"/>
+                            </div>
+                             <div class="form-group">
+                                <label for="senha"> Senha</label>
+                                <input type="secret" class="form-control"/>
+                            </div>
+                             <div class="form-group">
+                                <label for="confrimarSenha">Confirmar Senha</label>
+                                <input type="secret" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-block">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+        <script>
+            // Get the current year for the copyright
+            $('#year').text(new Date().getFullYear());
+
+            // Init Scrollspy
+            $('body').scrollspy({target: '#main-nav'});
+
+            // Smooth Scrolling
+            $("#main-nav a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    const hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        </script>
+    </h:body>
+</html>
+

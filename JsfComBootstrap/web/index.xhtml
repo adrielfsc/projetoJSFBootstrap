@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+              crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+              crossorigin="anonymous"/> 
+        <title>Requisicoes</title>
+        <style type="text/css">
+            .tableUpdated {
+                width: 90% !important;
+                margin: 17px 58px 0 !important;
+            }
+            .btnSpace {
+                margin: 17px;
+            }     
+        </style>
+    </h:head>
+    <h:body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top " id="main-nav">
+            <div class="container">
+                <h:link class="navbar-brand" value="Minor box" outcome="login.xhtml"/>
+            </div>
+        </nav>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="text-center">Lista de Despesas</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h:form id="studentForm">
+                                        <h:dataTable id="requisicoesTabela" binding="#{table}" value="#{requisicoesBean.listReqs}" var="reqs" 
+                                                     class="table table-responsive-sm table-striped table-bordered" rows="10" >
+                                            <h:column>
+                                                <f:facet name="header" >Id</f:facet>
+                                                <h:outputText value="#{table.rowIndex + 1}" />
+                                            </h:column>
+                                            <h:column >
+                                                <f:facet name="header">Descrição</f:facet>
+                                                <h:outputText value="#{reqs.descricaoRequisicao}" />
+                                            </h:column >
+                                            <h:column >
+                                                <f:facet name="header">Valor</f:facet>
+                                                <h:outputText value="#{reqs.valorRequisicao}" />
+                                            </h:column>
+                                            <h:column id="request_status" >
+                                                <f:facet name="header">Editar</f:facet>
+                                                <h:commandButton class="btn btn-secondary" value="Editar"/>
+                                            </h:column>
+                                        </h:dataTable>
+
+                                    </h:form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card text-center bg-primary text-white mb-2">
+                                <h:form>
+                                    <div class="card-body">
+                                        <h3>Adicionar Nova Despesa</h3>
+                                        <h4 class="display-4">
+                                            <i class="fas fa-pencil-alt"></i> 6
+                                        </h4>
+                                        <h:commandButton class="btn btn-outline-light btn-sm" value="Clique"/>
+                                    </div>
+                                </h:form>
+                            </div>
+                            <div class="card text-center bg-warning text-white mb-3">
+                                <h:form>
+                                    <div class="card-body">
+                                        <h3>Visualizar Total de Gastos</h3>
+                                        <h4 class="display-4">
+                                            <i class="fas fa-users"></i> 4
+                                        </h4>
+                                        <h:commandButton class="btn btn-outline-light btn-sm" value="Clique"/>
+                                    </div>
+                                </h:form>
+                            </div>
+                        </div>    
+                    </div>
+                </div> 
+  
+    </h:body>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+</html>
+
